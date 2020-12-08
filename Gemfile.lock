@@ -1,3 +1,9 @@
+PATH
+  remote: engines/core
+  specs:
+    news_core (0.1.0)
+      rails (~> 6.0.3, >= 6.0.3.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -179,6 +185,7 @@ DEPENDENCIES
   byebug
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  news_core!
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
   sass-rails (>= 6)

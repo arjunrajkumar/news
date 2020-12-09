@@ -4,12 +4,24 @@
   <title>Core</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
   
 </head>
 <body>
-
-<%= yield %>
+  <%= link_to "News", news.root_path %>
+  <%= link_to "Entries", news.entries_path %>
+  <div data-news-hook="main-navigation"><%= link_to "Home", news.root_path %></div>
+  
+  <% if current_user %>
+    <%= link_to "Logout", news.destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Login", news.new_user_session_path %>
+  <% end %>
+  
+  <% flash.each do |type, message| %>
+    <%= message %>
+  <% end %>
+  
+  <%= yield %>
 
 </body>
 </html>

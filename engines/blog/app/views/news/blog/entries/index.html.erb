@@ -1,0 +1,16 @@
+<%= link_to "New Entry", news.new_entry_path %>
+
+<h1>Entries</h1>
+
+
+<% @entries.each do |entry| %>
+  <%= entry.id %>
+  <%= link_to truncate(entry.title, length: 50), [news, entry] %>
+  <%= entry.published_at.to_s(:long) %>
+  
+  <%= link_to "Edit", news.edit_entry_path(entry) %>
+  
+  <%= link_to "Delete", [news, entry], method: :delete %>
+  
+  
+<% end %>

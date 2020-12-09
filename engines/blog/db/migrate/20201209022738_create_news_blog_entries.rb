@@ -4,6 +4,7 @@ class CreateNewsBlogEntries < ActiveRecord::Migration[6.0]
       t.string :title
       t.datetime :published_at
       t.text :body
+      t.references :user
 
       t.timestamps
     end

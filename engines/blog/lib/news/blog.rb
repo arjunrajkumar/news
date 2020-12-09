@@ -1,7 +1,7 @@
 
+require "deface"
 
-
-module New
-  module blog
+module News
+  module Blog
   end
 end
